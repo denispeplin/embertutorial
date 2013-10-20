@@ -3,7 +3,9 @@
       <a class="brand" href="#">Bloggr</a>
       <ul class="nav">
         <li><a href="#">Posts</a></li>
-        <li><a>About</a></li>
+        <li>{{#link-to 'about'}}About{{/link-to}}</li>
       </ul>
     </div>
   </div>
+
+{{outlet}}

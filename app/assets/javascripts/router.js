@@ -1,11 +1,18 @@
 Embertutorial.Router.map(function() {
     this.resource('about');
     this.resource('posts');
+    this.resource('post', { path: ':post_id' });
 });
 
 Embertutorial.PostsRoute = Ember.Route.extend({
   model: function() {
     return posts;
+  }
+});
+
+Embertutorial.PostRoute = Ember.Route.extend({
+  model: function(params) {
+    return posts.findBy('id', params.post_id);
   }
 });
 

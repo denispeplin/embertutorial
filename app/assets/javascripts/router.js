@@ -1,7 +1,8 @@
 Embertutorial.Router.map(function() {
     this.resource('about');
-    this.resource('posts');
-    this.resource('post', { path: ':post_id' });
+    this.resource('posts', function() {
+      this.resource('post', { path: ':post_id' });
+    });
 });
 
 Embertutorial.PostsRoute = Ember.Route.extend({

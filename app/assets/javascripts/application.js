@@ -21,18 +21,4 @@
 // for more details see: http://emberjs.com/guides/application/
 Embertutorial = Ember.Application.create();
 
-Embertutorial.PostController = Ember.ObjectController.extend({
-  isEditing: false,
-
-  actions: {
-    edit: function() {
-      this.set('isEditing', true);
-    },
-
-    doneEditing: function() {
-      this.set('isEditing', false)
-    }
-  }
-});
-
 //= require_tree .
